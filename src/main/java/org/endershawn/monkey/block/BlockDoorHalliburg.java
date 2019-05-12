@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 
 public class BlockDoorHalliburg extends BlockDoor {
 	private static Block.Properties props = Block.Properties.create(
-			Material.IRON, MaterialColor.IRON)
+			Material.GLASS, MaterialColor.GRASS)
 				.hardnessAndResistance(5.0F)
 				.sound(SoundType.METAL);
 				

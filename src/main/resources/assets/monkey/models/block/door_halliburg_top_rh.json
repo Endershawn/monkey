@@ -1,7 +1,7 @@
 {
     "parent": "block/door_top_rh",
     "textures": {
-        "bottom": "monkey:blocks/door_halliburg_lower",
-        "top": "monkey:blocks/door_halliburg_upper"
+        "bottom": "monkey:block/door_halliburg_lower",
+        "top": "monkey:block/door_halliburg_upper"
     }
 }
