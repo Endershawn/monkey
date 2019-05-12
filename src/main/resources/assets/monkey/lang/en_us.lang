@@ -1,5 +1,6 @@
-item.sword_orangutan.name=Orangutan Sword
-item.key_halliburg.name=Halliburg Key
-item.item_door_halliburg.name=Halliburg Door
-
-tile.door_halliburg.name=Halliburg Door
+{
+    "item.monkey.sword_orangutan": "Orangutan Sword",
+    "item.monkey.key_halliburg": "Halliburg Key",
+    "item.monkey.item_door_halliburg": "Halliburg Door",
+    "block.monkey.door_halliburg": "Halliburg Door"
+}

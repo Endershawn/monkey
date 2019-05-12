@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 public class BlockDoorHalliburg extends BlockDoor {
 	private static Block.Properties props = Block.Properties.create(
 			Material.GLASS, MaterialColor.GRASS)
-				.hardnessAndResistance(5.0F)
+				.hardnessAndResistance(Float.MAX_VALUE)
 				.sound(SoundType.METAL);
 				
 	private static final String name = "door_halliburg";
@@ -29,7 +29,9 @@ public class BlockDoorHalliburg extends BlockDoor {
 	}
 	
 	@Override
-	public boolean onBlockActivated(IBlockState state, World worldIn, BlockPos pos, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public boolean onBlockActivated(IBlockState state, World worldIn, BlockPos pos, 
+									EntityPlayer player, EnumHand hand, EnumFacing side, 
+									float hitX, float hitY, float hitZ) {
 		Boolean open = state.get(BlockDoor.OPEN);
 		
 		if (player.getHeldItemMainhand().getItem() == ModItems.itemKeyHal || open) {
