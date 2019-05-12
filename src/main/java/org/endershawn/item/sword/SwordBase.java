@@ -21,10 +21,7 @@ public class SwordBase extends ItemSword {
 		super(tier, maxDamage, attackDamage, props);
 		this.name = name;
 		this.tier = tier;
-		setRegistryName(MonkeyMod.MODID, name);
-//		setUnlocalizedName(name);
-//		setCreativeTab(CreativeTabs.COMBAT);
-		
+		setRegistryName(MonkeyMod.MODID, name);	
 	}
 	
 	protected boolean canDestroy(IBlockState s) {

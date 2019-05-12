@@ -20,7 +20,7 @@ public class MonkeyMod
     public static final String VERSION = "0.2";
 	
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public MonkeyMod() {
         // Register the setup method for modloading

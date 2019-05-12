@@ -17,17 +17,26 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = MonkeyMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModItems {
 	private static final Logger LOGGER = LogManager.getLogger();
+	
 	public static SwordBase swordOrang = new SwordBase(
 			"sword_orangutan", 
-			ItemTier.STONE, 
-			new Properties().group(ItemGroup.COMBAT), 
-			100, 3);
+			ItemTier.WOOD, 
+			new Properties().group(ItemGroup.COMBAT).defaultMaxDamage(10), 
+			100, 10);
+	
+	public static ItemDoorHalliburg itemDoorHal = new ItemDoorHalliburg();
+	public static Item itemKeyHal = new Item(
+			new Item.Properties()
+				.group(ItemGroup.REDSTONE))
+					.setRegistryName("key_halliburg");
 	
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-    	LOGGER.info("Registering Items");
+    	LOGGER.info("HELLO from register items");
         event.getRegistry().registerAll(
-        		swordOrang
+        		swordOrang,
+        		itemDoorHal,
+        		itemKeyHal
 		);
     }
 }
