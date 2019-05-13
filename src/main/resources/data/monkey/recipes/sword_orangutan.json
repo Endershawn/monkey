@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    " J ",
+    " S "
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:granite"
+    },
+    "J": {
+      "item": "minecraft:jungle_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+
+  "result": {
+    "item": "monkey:sword_orangutan",
+    "count": 1
+  }
+}
