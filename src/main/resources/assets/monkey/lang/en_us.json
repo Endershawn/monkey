@@ -1,6 +1,12 @@
 {
-    "item.monkey.sword_orangutan": "Orangutan Sword",
-    "item.monkey.key_halliburg": "Halliburg Key",
-    "item.monkey.item_door_halliburg": "Halliburg Door",
-    "block.monkey.door_halliburg": "Halliburg Door"
+	"item.monkey.sword_orangutan": "Orangutan Sword",
+	
+	"item.monkey.key_halliburg": "Halliburg Key",
+	"item.monkey.item_door_halliburg": "Halliburg Door",
+	"block.monkey.door_halliburg": "Halliburg Door",
+	
+	"item.monkey.emerald_boots": "Emerald Boots",
+	"item.monkey.emerald_chestplate": "Emerald Chestplate",
+	"item.monkey.emerald_leggings": "Emerald Leggings",
+	"item.monkey.emerald_helmet": "Emerald Helmet"
 }
