@@ -5,7 +5,6 @@ import org.endershawn.monkey.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -17,7 +16,6 @@ public class ClimbHandler {
 	private static final float UP_SPEED = 0.3f;
 	private static final float DOWN_SPEED = 0.2f;
 	private static final KeyBinding KEY_FALL = Minecraft.getInstance().gameSettings.keyBindJump;
-	private static final Item TOTEM = ModItems.swordOrang;
 	
 	@SubscribeEvent
 	public static void climb(LivingUpdateEvent event) {
@@ -27,7 +25,7 @@ public class ClimbHandler {
 		
 		EntityPlayer player = (EntityPlayer)event.getEntity();
 		
-		if (!(player.getHeldItemMainhand().getItem() == TOTEM)) {
+		if (!(isWearingOrang(player))) {
 			return;
 		}
 
@@ -42,6 +40,10 @@ public class ClimbHandler {
 				player.motionY = -DOWN_SPEED;
 		}
 		}
+	}
+	
+	private static boolean isWearingOrang(EntityPlayer player) {
+		return ModEntities.isWearing(player, ModItems.armorOrangutanChest.getArmorMaterial());
 	}
 	
     private static boolean isHoldingOn(EntityPlayer player) {

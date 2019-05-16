@@ -1,6 +1,11 @@
 package org.endershawn.monkey.entity;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.util.math.BlockPos;
 
 public class ModEntities {
@@ -13,7 +18,21 @@ public class ModEntities {
     			return true;
     		}
     	}
-    	
     	return false;
     }
+    
+	public static boolean isWearing(EntityPlayer p, IArmorMaterial m) {
+		for (EntityEquipmentSlot slot : EntityEquipmentSlot.values()) {
+			if (slot.getSlotType() == EntityEquipmentSlot.Type.ARMOR) {
+				Item i = p.getItemStackFromSlot(slot).getItem();
+				if (i instanceof ItemArmor) {
+					ItemArmor ia = (ItemArmor)i;
+					if (!(ia.getArmorMaterial().getClass().equals(m.getClass()))) {
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
 }

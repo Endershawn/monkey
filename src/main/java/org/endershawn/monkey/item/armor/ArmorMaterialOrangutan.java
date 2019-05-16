@@ -10,7 +10,7 @@ import net.minecraft.util.SoundEvent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class ArmorMaterialEmerald implements IArmorMaterial {
+public class ArmorMaterialOrangutan implements IArmorMaterial {
 	private String name;
 	private int maxDamageFactor;
 	private int[] damageReductionAmountArray;
@@ -20,15 +20,19 @@ public class ArmorMaterialEmerald implements IArmorMaterial {
 	private LazyLoadBase<Ingredient> repairMaterial;
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 };
 
-	public ArmorMaterialEmerald() {
-		this.name = "monkey:emerald";
+	public ArmorMaterialOrangutan() {
+        /**
+         * Holds the damage reduction (each 1 points is half a shield on gui) 
+         * of each piece of armor (helmet, plate, legs and boots)
+         */
+		this.damageReductionAmountArray = new int[] { 2, 3, 4, 2 };
+		this.name = "monkey:orangutan";
 		this.maxDamageFactor = 33;
-		this.damageReductionAmountArray = new int[] { 3, 6, 8, 3 };
 		this.enchantability = 10;
 		this.soundEvent = SoundEvents.ITEM_ARMOR_EQUIP_LEATHER;
 		this.toughness = 2;
 		this.repairMaterial = new LazyLoadBase<>(() -> {
-			return Ingredient.fromItems(Items.EMERALD);
+			return Ingredient.fromItems(Items.POTATO);
 		});
 	}
 

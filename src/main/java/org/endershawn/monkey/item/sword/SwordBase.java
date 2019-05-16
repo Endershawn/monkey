@@ -1,4 +1,4 @@
-package org.endershawn.item.sword;
+package org.endershawn.monkey.item.sword;
 
 
 import org.endershawn.monkey.MonkeyMod;

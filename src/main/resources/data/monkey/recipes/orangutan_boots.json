@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "E E",
+    "E E"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:jungle_log"
+    }
+  },
+
+  "result": {
+    "item": "monkey:orangutan_boots",
+    "count": 1
+  }
+}
