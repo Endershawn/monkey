@@ -33,6 +33,6 @@ public class ModEntities {
 				}
 			}
 		}
-		return true;
+		return false;
 	}
 }
