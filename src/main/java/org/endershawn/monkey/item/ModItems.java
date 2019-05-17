@@ -3,6 +3,7 @@ package org.endershawn.monkey.item;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.endershawn.monkey.MonkeyMod;
+import org.endershawn.monkey.item.armor.ArmorMaterialOrangutan;
 import org.endershawn.monkey.item.armor.ItemEmeraldBoots;
 import org.endershawn.monkey.item.armor.ItemEmeraldChestplate;
 import org.endershawn.monkey.item.armor.ItemEmeraldHelmet;
@@ -13,6 +14,7 @@ import org.endershawn.monkey.item.armor.ItemOrangutanHelmet;
 import org.endershawn.monkey.item.armor.ItemOrangutanLegs;
 import org.endershawn.monkey.item.sword.SwordBase;
 
+import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemGroup;
@@ -33,7 +35,8 @@ public class ModItems {
 			new Properties().group(ItemGroup.COMBAT).defaultMaxDamage(10), 
 			100, 10);
 	
-	public static ItemOrangutanChestplate armorOrangutanChest = new ItemOrangutanChestplate();
+	public static IArmorMaterial armorMaterialOrang = new ArmorMaterialOrangutan();
+	private static ItemOrangutanChestplate armorOrangutanChest = new ItemOrangutanChestplate();
 	private static ItemOrangutanHelmet armorOrangutanHelmit = new ItemOrangutanHelmet();
 	private static ItemOrangutanBoots armorOrangutanBoots = new ItemOrangutanBoots();
 	private static ItemOrangutanLegs armorOrangutanLegs = new ItemOrangutanLegs();

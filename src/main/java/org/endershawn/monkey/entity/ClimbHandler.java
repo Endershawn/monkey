@@ -25,10 +25,10 @@ public class ClimbHandler {
 		
 		EntityPlayer player = (EntityPlayer)event.getEntity();
 		
-		if (!(isWearingOrang(player))) {
+		if (!isWearingOrang(player)) {
 			return;
 		}
-
+		
 		if (isHoldingOn(player)) {
 			player.motionY = 0;
 			player.velocityChanged = true;
@@ -43,7 +43,7 @@ public class ClimbHandler {
 	}
 	
 	private static boolean isWearingOrang(EntityPlayer player) {
-		return ModEntities.isWearing(player, ModItems.armorOrangutanChest.getArmorMaterial());
+		return ModEntities.isWearing(player, ModItems.armorMaterialOrang);
 	}
 	
     private static boolean isHoldingOn(EntityPlayer player) {
