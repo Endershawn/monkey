@@ -1,11 +1,15 @@
 package org.endershawn.monkey.entity;
 
+import org.endershawn.monkey.item.ModItems;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemTiered;
 import net.minecraft.util.math.BlockPos;
 
 public class ModEntities {
@@ -32,5 +36,28 @@ public class ModEntities {
 			}
 		}
 		return true;
+	}
+	
+	public static boolean isWearingOrang(EntityPlayer p) {
+		return isWearing(p, ModItems.armorMaterialOrang);
+	}
+	
+	private static boolean isTier(Item i, IItemTier tier) {
+		if (i instanceof ItemTiered) {
+			return ((ItemTiered)i).getTier().getClass().equals(tier.getClass());
+		}
+
+		return false;
+	}
+
+	private static boolean isHoldingTier(EntityPlayer p, IItemTier tier) {
+		Item main = p.getHeldItemMainhand().getItem();
+		Item off = p.getHeldItemOffhand().getItem();
+
+		return (isTier(main, tier) || isTier(off, tier));
+	}
+	
+	public static boolean isHoldingOrang(EntityPlayer p) {
+		return isHoldingTier(p, ModItems.orangTier);
 	}
 }

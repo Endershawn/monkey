@@ -13,12 +13,12 @@ import org.endershawn.monkey.item.armor.ItemOrangutanChestplate;
 import org.endershawn.monkey.item.armor.ItemOrangutanHelmet;
 import org.endershawn.monkey.item.armor.ItemOrangutanLegs;
 import org.endershawn.monkey.item.sword.SwordBase;
+import org.endershawn.monkey.item.sword.SwordOrangutan;
 
 import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
-import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemTier;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,11 +29,8 @@ public class ModItems {
 	private static final Logger LOGGER = LogManager.getLogger();
 	
 	/** Orangutan Equipment **/
-	public static SwordBase swordOrang = new SwordBase(
-			"sword_orangutan", 
-			ItemTier.WOOD, 
-			new Properties().group(ItemGroup.COMBAT).defaultMaxDamage(10), 
-			100, 10);
+	public static final IItemTier orangTier = new OrangutanTier();
+	public static SwordBase swordOrang = new SwordOrangutan();
 	
 	public static IArmorMaterial armorMaterialOrang = new ArmorMaterialOrangutan();
 	private static ItemOrangutanChestplate armorOrangutanChest = new ItemOrangutanChestplate();

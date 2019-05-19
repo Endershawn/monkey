@@ -28,7 +28,7 @@ public class ClimbHandler {
 		if (!isWearingOrang(player)) {
 			return;
 		}
-		
+				
 		if (isHoldingOn(player)) {
 			player.motionY = 0;
 			player.velocityChanged = true;
@@ -38,7 +38,7 @@ public class ClimbHandler {
 				player.motionY = UP_SPEED;
 			} else  {
 				player.motionY = -DOWN_SPEED;
-		}
+			}
 		}
 	}
 	
