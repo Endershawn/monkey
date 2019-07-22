@@ -1,6 +1,6 @@
 package org.endershawn.monkey.entity;
 
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,8 +12,8 @@ public class FallHandler {
 	
 	@SubscribeEvent
 	public static void hurt(LivingHurtEvent event) {
-		if (event.getSource() == DamageSource.FALL && event.getEntity() instanceof EntityPlayer) {
-			if (ModEntities.isWearingOrang((EntityPlayer)event.getEntity())) {
+		if (event.getSource() == DamageSource.FALL && event.getEntity() instanceof PlayerEntity) {
+			if (ModEntities.isWearingOrang((PlayerEntity)event.getEntity())) {
 				float amount = event.getAmount();
 				
 				if (amount < ORANG_LIMIT) {

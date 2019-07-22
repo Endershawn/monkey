@@ -2,14 +2,14 @@ package org.endershawn.monkey.item.armor;
 
 import org.endershawn.monkey.MonkeyMod;
 
-import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemGroup;
 
-public class ItemEmeraldHelmet extends ItemArmor {
+public class ItemEmeraldHelmet extends ArmorItem {
 	public ItemEmeraldHelmet() {
-		super(new ArmorMaterialEmerald(), EntityEquipmentSlot.HEAD, 
+		super(new ArmorMaterialEmerald(), EquipmentSlotType.HEAD, 
 				new Item.Properties().group(ItemGroup.COMBAT));
 		setRegistryName(MonkeyMod.MODID, "emerald_helmet");
 	}

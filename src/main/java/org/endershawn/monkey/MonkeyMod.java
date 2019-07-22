@@ -1,6 +1,6 @@
 package org.endershawn.monkey;
 
-import net.minecraft.init.Blocks;
+import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

@@ -2,11 +2,11 @@ package org.endershawn.monkey.item;
 
 import java.util.function.Supplier;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyLoadBase;
+
 
 public class OrangutanTier implements IItemTier {	
 	   /** The level of material this tool can harvest (3 = DIAMOND, 2 = IRON, 1 = STONE, 0 = WOOD/GOLD) */

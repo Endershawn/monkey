@@ -1,12 +1,12 @@
 package org.endershawn.monkey.item.armor;
 
-import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyLoadBase;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
+
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -31,16 +31,18 @@ public class ArmorMaterialOrangutan implements IArmorMaterial {
 		this.enchantability = 10;
 		this.soundEvent = SoundEvents.ITEM_ARMOR_EQUIP_LEATHER;
 		this.toughness = 2;
-		this.repairMaterial = new LazyLoadBase<>(() -> {
-			return Ingredient.fromItems(Items.POTATO);
-		});
+//		this.repairMaterial = new LazyLoadBase<>(() -> {
+//			return Ingredient.fromItems(Items.POTATO);
+//		});
 	}
 
-	public int getDurability(EntityEquipmentSlot slotIn) {
+	@Override
+	public int getDurability(EquipmentSlotType slotIn) {
 		return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
 	}
 
-	public int getDamageReductionAmount(EntityEquipmentSlot slotIn) {
+	@Override
+	public int getDamageReductionAmount(EquipmentSlotType slotIn) {
 		return this.damageReductionAmountArray[slotIn.getIndex()];
 	}
 
