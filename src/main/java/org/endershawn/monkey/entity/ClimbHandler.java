@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ClimbHandler {
 	private static final int MIN_HEIGHT = 3;
 	private static final int REACH = 1;
-	private static final float UP_SPEED = 0.3f;
+	private static final float UP_SPEED = 0.2f;
 	private static final float DOWN_SPEED = 0.2f;
 	private static final KeyBinding KEY_FALL = Minecraft.getInstance().gameSettings.keyBindJump;
 	

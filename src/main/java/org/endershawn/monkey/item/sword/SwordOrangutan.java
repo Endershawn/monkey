@@ -1,6 +1,5 @@
 package org.endershawn.monkey.item.sword;
 
-import org.endershawn.monkey.MonkeyMod;
 import org.endershawn.monkey.item.ModItems;
 
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,13 +11,13 @@ import net.minecraft.util.math.Vec3i;
 
 public class SwordOrangutan extends SwordBase {
 	private static final float LIFT = .5f;
-	private static final float MOVE = 1f;
+	private static final float MOVE = .75f;
 	
 	public SwordOrangutan() {
 		super("sword_orangutan", 
 			  ModItems.orangTier, 
-			  3, -3.0f,
-		  	  new Properties().group(ItemGroup.COMBAT).defaultMaxDamage(5));
+			  3, 1.0f,
+		  	  new Properties().group(ItemGroup.COMBAT));
 	}
 	
 	@Override

@@ -25,7 +25,7 @@ public class OrangutanTier implements IItemTier {
 		  Supplier<Ingredient> i = () -> Ingredient.fromItems(Items.STONE_SWORD);
 		  
 	      this.harvestLevel = 2;
-	      this.maxUses = 500;
+	      this.maxUses = 250;
 	      this.efficiency = 5.0f;
 	      this.attackDamage = 3.0f;
 	      this.enchantability = 10;

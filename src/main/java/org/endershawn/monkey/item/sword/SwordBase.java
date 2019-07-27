@@ -4,7 +4,6 @@ package org.endershawn.monkey.item.sword;
 import org.endershawn.monkey.MonkeyMod;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.SwordItem;
